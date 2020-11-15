@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { of } from 'rxjs/observable/of';
-import { map } from 'rxjs/operator/map';
-import { catchError } from 'rxjs/operators/catchError';
+import { Player } from './services/player.service';
 
 @Component({
   selector: 'app-root',
@@ -10,13 +7,15 @@ import { catchError } from 'rxjs/operators/catchError';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'app works!';
+  _title = 'app works!';
   _partition = [];
+  _interval = 500;
+
+  constructor(public player: Player) {
+    this.player = new Player();
+  }
   
   ngOnInit() {
-    //*** ajouter une variable de type []
-    var _note = [];
-
     /**
      * Composant principal
      * - Ecoute du chargement de la page
@@ -24,18 +23,22 @@ export class AppComponent implements OnInit {
      * - Appel de la fonction buttonPlay avec la valeur de la touche pressée
      */
     window.addEventListener("load", () => {
+      // a commenter listener clavier
       window.addEventListener("keypress", (_clavier) => {
-        let _toucheClavier = null;
-        switch (_clavier["key"]) {
-          case 'a':
-            _toucheClavier = 'A0';
-            break;
-          
-          default:
-            break;
-        }
 
-        this.buttonPlay(_toucheClavier);
+        const _mapClavier = {
+          'a': 'A0',
+          'q': 'A0',
+          'z': 'A0',
+          's': 'A0',
+          'e': 'A0',
+          'r': 'A0',
+          'f': 'A0',
+          't': 'A0',
+          'g': 'A0',
+        };
+
+        this._partition = this.player.buttonPlay(_mapClavier[_clavier["key"]], this._partition);
       });
     });
   }
@@ -48,43 +51,22 @@ export class AppComponent implements OnInit {
     console.log("Partion à enregistrer: ", enregistrer);
   }
 
+  /**
+   * 
+   */
   nouveau() {
     this._partition = [];
   }
 
+  /**
+   * 
+   */
   lire() {
     this._partition.forEach((note, index) => {
+      // a commenter setTimeout avec * index 
       setTimeout(() => {
-        this.buttonPlay(note);
-      }, 500 * index);
+        this.player.buttonPlay(note, this._partition);
+      }, this._interval * index);
     });
   }
-
-  /**
-     * Fonction de lecture de fichier audio mp3
-     * suivant une valeur de chaîne
-     * @param {*} _touche
-     */
-  buttonPlay(_event: any) {
-    let _touche = null;
-
-    if (_event && _event.srcElement && _event.srcElement.attributes) {
-      for (let index = 0; index < _event.srcElement.attributes.length; index++) {
-        const element = _event.srcElement.attributes[index];
-        if (element.nodeName === "data-touche") {
-          _touche = element.nodeValue;
-          this._partition.push(_touche);
-        }
-      }
-    } else {
-      _touche = _event;
-    }
-
-    if (_touche !== null) { 
-      console.log("Touche reçue :" + _touche, './assets/mp3/' + _touche + '.mp3');
-      const toPlay = new Audio('./assets/mp3/' + _touche + '.mp3');
-      toPlay.play();
-    }
-  }
-
 }
