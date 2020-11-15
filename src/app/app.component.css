@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(184, 177, 177);
+}
+
+main {
+    padding: 1rem;
+}
+
+.menu {
+    background-color: rgb(184, 177, 177);
+    border: 0.5px solid rgb(184, 177, 177);
+    box-shadow: 0 30px 30px 30px lightgray;
+    border-radius: 0 150px 0 150px;
+}
+
+.nav-wrapper {
+    color: #fff;
+    position: relative;
+    background-color: rgb(144, 57, 103);
+    border-radius: 0 150px 0 150px;
+    padding-left: 70px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav ul li:hover a {
+    background-color: rgba(199, 56, 111, 0.671);
+    padding: 0 10px -10px 10px;
+}
+
+.logo {
+    color: black;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 25px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+section {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#piano-body {
+    background-color: black;
+    border: 2px solid black;
+    margin-left: 115px;
+    margin-right: 125px;
+    padding-top: 50px;
+    padding-left: 55px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+
+.key-black {
+    position: absolute;
+    color: white;
+    height: 23vh;
+    width: 35px;
+    margin-left: -27px;
+    padding-top: 100px;
+    border-radius: 0 0 55px 55px;
+    background: black;
+    font-size: 13px;
+    text-align: start;
+}
+
+.key-white {
+    width: 3.45rem;
+    height: 40vh;
+    margin-left: -12px;
+    padding-top: 250px;
+    border-radius: 0 0 12px 12px;
+}
+
+button {
+    padding: 2.5rem 0.5rem;
+    background: linear-gradient(to bottom, white, rgb(245, 242, 242));
+    border-radius: 4px;
+}
+
+button:active {
+    background: rgb(187, 183, 183);
+}
