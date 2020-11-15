@@ -11,8 +11,8 @@ import { catchError } from 'rxjs/operators/catchError';
 })
 export class AppComponent implements OnInit {
   title = 'app works!';
-  _touche = [];
-
+  _partition = [];
+  
   ngOnInit() {
     //*** ajouter une variable de type []
     var _note = [];
@@ -25,7 +25,17 @@ export class AppComponent implements OnInit {
      */
     window.addEventListener("load", () => {
       window.addEventListener("keypress", (_clavier) => {
-          this.buttonPlay(_clavier["key"]);
+        let _toucheClavier = null;
+        switch (_clavier["key"]) {
+          case 'a':
+            _toucheClavier = 'A0';
+            break;
+          
+          default:
+            break;
+        }
+
+        this.buttonPlay(_toucheClavier);
       });
     });
   }
@@ -34,8 +44,20 @@ export class AppComponent implements OnInit {
    * Enregistrer
    */
   enregistrer() {
-    const enregistrer = this._touche.push("a", "z", "e", "r", "t", "y", "u");
-    console.log("partion", enregistrer);
+    const enregistrer = this._partition;
+    console.log("Partion à enregistrer: ", enregistrer);
+  }
+
+  nouveau() {
+    this._partition = [];
+  }
+
+  lire() {
+    this._partition.forEach((note, index) => {
+      setTimeout(() => {
+        this.buttonPlay(note);
+      }, 500 * index);
+    });
   }
 
   /**
@@ -46,11 +68,16 @@ export class AppComponent implements OnInit {
   buttonPlay(_event: any) {
     let _touche = null;
 
-    for (let index = 0; index < _event.srcElement.attributes.length; index++) {
-      const element = _event.srcElement.attributes[index];
-      if (element.nodeName === "data-touche") {
-        _touche = element.nodeValue;
+    if (_event && _event.srcElement && _event.srcElement.attributes) {
+      for (let index = 0; index < _event.srcElement.attributes.length; index++) {
+        const element = _event.srcElement.attributes[index];
+        if (element.nodeName === "data-touche") {
+          _touche = element.nodeValue;
+          this._partition.push(_touche);
+        }
       }
+    } else {
+      _touche = _event;
     }
 
     if (_touche !== null) { 

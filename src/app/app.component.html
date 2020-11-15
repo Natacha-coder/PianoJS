@@ -14,16 +14,20 @@
 
 <main>
 
+    <button (click)="nouveau()">Nouveau</button>
+    <button (click)="enregistrer()">Enregistrer</button>
+    <button (click)="lire()">Jouer la Partition</button>
+
     <h1> Piano </h1>
 
     <section>
         <div id="piano-body">
 
-            <button class="key-white" data-touche="a" (click)="buttonPlay($event)">Do</button>
-            <button class="key-black" data-touche="a" (click)="buttonPlay($event)">Do#<br> Ré&#9837;</button>
-            <button class="key-white" data-touche="z" (click)="buttonPlay($event)">Ré</button>
-            <button class="key-black" data-touche="a" (click)="buttonPlay($event)">Ré#<br> mi&#9837;</button>
-            <button class="key-white" data-touche="e" (click)="buttonPlay($event)">Mi</button>
+            <button class="key-white" data-touche="A0" (click)="buttonPlay($event)">Do</button>
+            <button class="key-black" data-touche="A1" (click)="buttonPlay($event)">Do#<br> Ré&#9837;</button>
+            <button class="key-white" data-touche="A2" (click)="buttonPlay($event)">Ré</button>
+            <button class="key-black" data-touche="A3" (click)="buttonPlay($event)">Ré#<br> mi&#9837;</button>
+            <button class="key-white" data-touche="A4" (click)="buttonPlay($event)">Mi</button>
             <button class="key-white" data-touche="r" (click)="buttonPlay($event)">Fa</button>
             <button class="key-black" data-touche="a" (click)="buttonPlay($event)">Fa#<br> Sol&#9837;</button>
             <button class="key-white" data-touche="t" (click)="buttonPlay($event)">Sol</button>
