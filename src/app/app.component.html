@@ -23,71 +23,71 @@
     <section>
         <div id="piano-body">
 
-            <button class="key-white" data-touche="C2" (click)="player.buttonPlay($event, _partition)">Do</button>
-            <button class="key-black" data-touche="" (click)="player.buttonPlay($event, _partition)">Do#<br> Ré&#9837;</button>
-            <button class="key-white" data-touche="D2" (click)="player.buttonPlay($event, _partition)">Ré</button>
-            <button class="key-black" data-touche="" (click)="player.buttonPlay($event, _partition)">Ré#<br> mi&#9837;</button>
-            <button class="key-white" data-touche="E2" (click)="player.buttonPlay($event, _partition)">Mi</button>
-            <button class="key-white" data-touche="F2" (click)="player.buttonPlay($event, _partition)">Fa</button>
-            <button class="key-black" data-touche="" (click)="player.buttonPlay($event, _partition)">Fa#<br> Sol&#9837;</button>
-            <button class="key-white" data-touche="G2" (click)="player.buttonPlay($event, _partition)">Sol</button>
-            <button class="key-black" data-touche="" (click)="player.buttonPlay($event, _partition)">Sol#<br> La&#9837;</button>
-            <button class="key-white" data-touche="A2" (click)="player.buttonPlay($event, _partition)">La</button>
-            <button class="key-black" data-touche="" (click)="player.buttonPlay($event, _partition)">La#<br> Si&#9837;</button>
-            <button class="key-white" data-touche="B2" (click)="player.buttonPlay($event, _partition)">Si</button>
+            <button class="key-white" data-touche="C2" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Do</button>
+            <button class="key-black" data-touche="D2" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Do#<br> Ré&#9837;</button>
+            <button class="key-white" data-touche="E2" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Ré</button>
+            <button class="key-black" data-touche="F2" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Ré#<br> mi&#9837;</button>
+            <button class="key-white" data-touche="G2" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Mi</button>
+            <button class="key-white" data-touche="A2" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Fa</button>
+            <button class="key-black" data-touche="A6" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Fa#<br> Sol&#9837;</button>
+            <button class="key-white" data-touche="A7" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Sol</button>
+            <button class="key-black" data-touche="C1" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Sol#<br> La&#9837;</button>
+            <button class="key-white" data-touche="C2" (click)="player.buttonPlay($event, _partition, 'enregistrer')">La</button>
+            <button class="key-black" data-touche="C3" (click)="player.buttonPlay($event, _partition, 'enregistrer')">La#<br> Si&#9837;</button>
+            <button class="key-white" data-touche="C4" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Si</button>
 
-            <button class="key-white" data-touche="C5" (click)="player.buttonPlay($event, _partition)">Do</button>
-            <button class="key-black" data-touche="C6" (click)="player.buttonPlay($event, _partition)">Do#<br> Ré&#9837;</button>
-            <button class="key-white" data-touche="C7" (click)="player.buttonPlay($event, _partition)">Ré</button>
-            <button class="key-black" data-touche="C8" (click)="player.buttonPlay($event, _partition)">Ré#<br> mi&#9837;</button>
-            <button class="key-white" data-touche="Ds1" (click)="player.buttonPlay($event, _partition)">Mi</button>
-            <button class="key-white" data-touche="Ds2" (click)="player.buttonPlay($event, _partition)">Fa</button>
-            <button class="key-black" data-touche="Ds3" (click)="player.buttonPlay($event, _partition)">Fa#<br> Sol&#9837;</button>
-            <button class="key-white" data-touche="Ds4" (click)="player.buttonPlay($event, _partition)">Sol</button>
-            <button class="key-black" data-touche="Ds5" (click)="player.buttonPlay($event, _partition)">Sol#<br> La&#9837;</button>
-            <button class="key-white" data-touche="Ds6" (click)="player.buttonPlay($event, _partition)">La</button>
-            <button class="key-black" data-touche="Ds7" (click)="player.buttonPlay($event, _partition)">La#<br> Si&#9837;</button>
-            <button class="key-white" data-touche="Fs1" (click)="player.buttonPlay($event, _partition)">Si</button>
+            <button class="key-white" data-touche="C5" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Do</button>
+            <button class="key-black" data-touche="C6" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Do#<br> Ré&#9837;</button>
+            <button class="key-white" data-touche="C7" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Ré</button>
+            <button class="key-black" data-touche="C8" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Ré#<br> mi&#9837;</button>
+            <button class="key-white" data-touche="Ds1" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Mi</button>
+            <button class="key-white" data-touche="Ds2" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Fa</button>
+            <button class="key-black" data-touche="Ds3" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Fa#<br> Sol&#9837;</button>
+            <button class="key-white" data-touche="Ds4" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Sol</button>
+            <button class="key-black" data-touche="Ds5" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Sol#<br> La&#9837;</button>
+            <button class="key-white" data-touche="Ds6" (click)="player.buttonPlay($event, _partition, 'enregistrer')">La</button>
+            <button class="key-black" data-touche="Ds7" (click)="player.buttonPlay($event, _partition, 'enregistrer')">La#<br> Si&#9837;</button>
+            <button class="key-white" data-touche="Fs1" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Si</button>
 
-            <button class="key-white" data-touche="Fs2" (click)="player.buttonPlay($event, _partition)">Do</button>
-            <button class="key-black" data-touche="Fs3" (click)="player.buttonPlay($event, _partition)">Do#<br> Ré&#9837;</button>
-            <button class="key-white" data-touche="Fs4" (click)="player.buttonPlay($event, _partition)">Ré</button>
-            <button class="key-black" data-touche="Fs5" (click)="player.buttonPlay($event, _partition)">Ré#<br> mi&#9837;</button>
-            <button class="key-white" data-touche="Fs6" (click)="player.buttonPlay($event, _partition)">Mi</button>
-            <button class="key-white" data-touche="Fs7" (click)="player.buttonPlay($event, _partition)">Fa</button>
-            <button class="key-black" (click)="player.buttonPlay($event, _partition)">Fa#<br> Sol&#9837;</button>
-            <button class="key-white" (click)="player.buttonPlay($event, _partition)">Sol</button>
-            <button class="key-black" (click)="player.buttonPlay($event, _partition)">Sol#<br> La&#9837;</button>
-            <button class="key-white" (click)="player.buttonPlay($event, _partition)">La</button>
-            <button class="key-black" (click)="player.buttonPlay($event, _partition)">La#<br> Si&#9837;</button>
-            <button class="key-white" (click)="player.buttonPlay($event, _partition)">Si</button>
+            <button class="key-white" data-touche="Fs2" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Do</button>
+            <button class="key-black" data-touche="Fs3" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Do#<br> Ré&#9837;</button>
+            <button class="key-white" data-touche="Fs4" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Ré</button>
+            <button class="key-black" data-touche="Fs5" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Ré#<br> mi&#9837;</button>
+            <button class="key-white" data-touche="Fs6" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Mi</button>
+            <button class="key-white" data-touche="Fs7" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Fa</button>
+            <button class="key-black" data-touche="Gb1" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Fa#<br> Sol&#9837;</button>
+            <button class="key-white" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Sol</button>
+            <button class="key-black" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Sol#<br> La&#9837;</button>
+            <button class="key-white" (click)="player.buttonPlay($event, _partition, 'enregistrer')">La</button>
+            <button class="key-black" (click)="player.buttonPlay($event, _partition, 'enregistrer')">La#<br> Si&#9837;</button>
+            <button class="key-white" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Si</button>
 
-            <button class="key-white" (click)="player.buttonPlay($event, _partition)">Do</button>
-            <button class="key-black" (click)="player.buttonPlay($event, _partition)">Do#<br> Ré&#9837;</button>
-            <button class="key-white" (click)="player.buttonPlay($event, _partition)">Ré</button>
-            <button class="key-black" (click)="player.buttonPlay($event, _partition)">Ré#<br> mi&#9837;</button>
-            <button class="key-white" (click)="player.buttonPlay($event, _partition)">Mi</button>
-            <button class="key-white" (click)="player.buttonPlay($event, _partition)">Fa</button>
-            <button class="key-black" (click)="player.buttonPlay($event, _partition)">Fa#<br> Sol&#9837;</button>
-            <button class="key-white" (click)="player.buttonPlay($event, _partition)">Sol</button>
-            <button class="key-black" (click)="player.buttonPlay($event, _partition)">Sol#<br> La&#9837;</button>
-            <button class="key-white" (click)="player.buttonPlay($event, _partition)">La</button>
-            <button class="key-black" (click)="player.buttonPlay($event, _partition)">La#<br> Si&#9837;</button>
-            <button class="key-white" (click)="player.buttonPlay($event, _partition)">Si</button>
+            <button class="key-white" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Do</button>
+            <button class="key-black" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Do#<br> Ré&#9837;</button>
+            <button class="key-white" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Ré</button>
+            <button class="key-black" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Ré#<br> mi&#9837;</button>
+            <button class="key-white" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Mi</button>
+            <button class="key-white" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Fa</button>
+            <button class="key-black" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Fa#<br> Sol&#9837;</button>
+            <button class="key-white" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Sol</button>
+            <button class="key-black" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Sol#<br> La&#9837;</button>
+            <button class="key-white" (click)="player.buttonPlay($event, _partition, 'enregistrer')">La</button>
+            <button class="key-black" (click)="player.buttonPlay($event, _partition, 'enregistrer')">La#<br> Si&#9837;</button>
+            <button class="key-white" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Si</button>
 
-            <button class="key-white" (click)="player.buttonPlay($event, _partition)">Do</button>
-            <button class="key-black" (click)="player.buttonPlay($event, _partition)">Do#<br> Ré&#9837;</button>
-            <button class="key-white" (click)="player.buttonPlay($event, _partition)">Ré</button>
-            <button class="key-black" (click)="player.buttonPlay($event, _partition)">Ré#<br> mi&#9837;</button>
-            <button class="key-white" (click)="player.buttonPlay($event, _partition)">Mi</button>
-            <button class="key-white" (click)="player.buttonPlay($event, _partition)">Fa</button>
-            <button class="key-black" (click)="player.buttonPlay($event, _partition)">Fa#<br> Sol&#9837;</button>
-            <button class="key-white" (click)="player.buttonPlay($event, _partition)">Sol</button>
-            <button class="key-black" (click)="player.buttonPlay($event, _partition)">Sol#<br> La&#9837;</button>
-            <button class="key-white" (click)="player.buttonPlay($event, _partition)">La</button>
-            <button class="key-black" (click)="player.buttonPlay($event, _partition)">La#<br> Si&#9837;</button>
-            <button class="key-white" (click)="player.buttonPlay($event, _partition)">Si</button>
-            <button class="key-white" (click)="player.buttonPlay($event, _partition)">Do</button>
+            <button class="key-white" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Do</button>
+            <button class="key-black" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Do#<br> Ré&#9837;</button>
+            <button class="key-white" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Ré</button>
+            <button class="key-black" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Ré#<br> mi&#9837;</button>
+            <button class="key-white" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Mi</button>
+            <button class="key-white" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Fa</button>
+            <button class="key-black" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Fa#<br> Sol&#9837;</button>
+            <button class="key-white" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Sol</button>
+            <button class="key-black" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Sol#<br> La&#9837;</button>
+            <button class="key-white" (click)="player.buttonPlay($event, _partition, 'enregistrer')">La</button>
+            <button class="key-black" (click)="player.buttonPlay($event, _partition, 'enregistrer')">La#<br> Si&#9837;</button>
+            <button class="key-white" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Si</button>
+            <button class="key-white" (click)="player.buttonPlay($event, _partition, 'enregistrer')">Do</button>
         </div>
 
     </section>
