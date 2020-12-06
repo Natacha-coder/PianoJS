@@ -29,10 +29,18 @@ export class AppComponent implements OnInit {
 
         // Association touche clavier au son Mp3
         const _mapClavier = new Clavier();
+        const _touchePressee = _mapClavier[_clavier["key"]];
     
         // key-white=document.getElementById("boite");
+
+        const _elementTouche: HTMLElement = document.querySelector('[data-touche="'+_touchePressee+'"]');
+
+        _elementTouche.classList.add('active');
+        this._partition = this.player.buttonPlay(_touchePressee, this._partition, 'enregistrer');
         
-        this._partition = this.player.buttonPlay(_mapClavier[_clavier["key"]], this._partition, 'enregistrer');
+        setTimeout(() => {
+          _elementTouche.classList.remove('active');
+        }, 100);
         
       });
     });
