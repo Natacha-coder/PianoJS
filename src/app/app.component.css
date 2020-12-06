@@ -91,7 +91,7 @@ section {
 }
 
 .key-white {
-    width: 3.45rem;
+    width: 3.43rem;
     height: 40vh;
     margin-left: -12px;
     padding-top: 250px;
@@ -104,6 +104,7 @@ button {
     border-radius: 4px;
 }
 
+button.active,
 button:active {
     background: rgb(187, 183, 183);
 }
