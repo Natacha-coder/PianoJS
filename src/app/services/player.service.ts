@@ -24,11 +24,11 @@ export class Player {
           _partition.push(_touche);
         }
       }
-    } else if (!_event.srcElement && !_event.srcElement.attribute && mode === 'enregistrer'){
+    } else if (!_event.srcElement && mode === 'enregistrer'){
       console.log('event', _event);
       _touche = _event;
       _partition.push(_touche);
-    } else if (mode === 'lire') {
+    } else {
       console.log('lecture', _event);
       _touche = _event;
     }
@@ -39,7 +39,6 @@ export class Player {
       console.log("[Player] Service - Touche reçue :" + _touche, this._pathMP3 + _touche + '.mp3');
       const toPlay = new Audio(this._pathMP3 + _touche + '.mp3');
       toPlay.play();
-      
     }
 
     this.change(_event, 'down');
@@ -48,14 +47,17 @@ export class Player {
   }
 
   change(_event: any, mode: 'up' | 'down') {
+    
     console.log('change', _event, mode);
 
-    if(this.indice === 0) {
-      _event.srcElement.style.backgroundColor="lightgray";
-      this.indice=1;
-    } else {
-      _event.srcElement.style.backgroundColor="";
-      this.indice=0;
+    if(_event && _event.srcElement && _event.srcElement.style) {
+      if(this.indice === 0) {
+          _event.srcElement.style.backgroundColor="lightgray";
+          this.indice=1;
+        } else {
+          _event.srcElement.style.backgroundColor="";
+          this.indice=0;
+        }
     }
   }
 }
